@@ -10,7 +10,29 @@ def get_current(city: str) -> dict:
         res = requests.get(f"https://api.openweathermap.org/data/2.5/weather?q={city}&units=imperial&appid={API_KEY}")
         res.raise_for_status()
 
-        return res.json()
+        data = res.json()
+
+        # Extract necessary data
+        icon = data["weather"][0]["icon"]
+        main = data["weather"][0]["main"]
+        temp = data["main"]["temp"]
+        wind = data["wind"]
+        sunrise = data["sys"]["sunrise"]
+        sunset = data["sys"]["sunset"]
+        dt = data["dt"]
+        tz_offset = data["timezone"]
+        name = data["name"]
+
+        return {
+            "icon": icon,
+            "main": main,
+            "temp": temp,
+            "wind": wind,
+            "sunrise": sunrise,
+            "sunset": sunset,
+            "dt": dt,
+            "name": name
+        }
 
     except Timeout:
         return {"err": "Request timed out"}

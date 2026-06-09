@@ -9,7 +9,7 @@ class CurrForecastView(APIView):
 
     def get(self, request):
 
-        city = request.query_params.get("q")
+        city = request.query_params.get("city")
 
         currForecast = get_current(city)
         return Response(currForecast)

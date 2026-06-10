@@ -4,6 +4,7 @@ from requests.exceptions import (Timeout, ConnectionError, HTTPError)
 
 API_KEY = settings.API_KEY
 
+
 def get_current(city: str) -> dict:
     try:
         

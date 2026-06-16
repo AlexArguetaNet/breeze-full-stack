@@ -6,13 +6,22 @@
     background-attachment: fixed;
     min-height: 100vh;
     width: 100vw;
+    overflow: hidden;
 }
 
 #dashboard {
-    margin: auto;
+    margin: 20px auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     max-width: 600px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: var(--container-color);
+    border-radius: var(--primary-radius);
+    color: rgb(255, 255, 255);
+}
+
+#dashboard .cards {
+    display: flex;
+    justify-content: space-between;
 }

@@ -31,6 +31,7 @@ def get_current(city: str) -> dict:
             "wind": wind,
             "sunrise": sunrise,
             "sunset": sunset,
+            "tz_offset": tz_offset,
             "dt": dt,
             "name": name
         }

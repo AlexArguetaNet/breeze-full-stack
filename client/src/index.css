@@ -4,3 +4,8 @@
     padding: 0px;
     font-family: "Montserrat", sans-serif;
 }
+
+:root {
+    --primary-radius: 5px;
+    --container-color: rgba(41, 41, 41, 0.467);
+}

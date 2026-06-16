@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
-import { getForecast } from "./services/weather";
-import Dashboard from "./components/dashboard/Dashboard";
+import { useEffect, useState } from "react"
+import { getForecast } from "./services/weather"
+import Dashboard from "./components/dashboard/Dashboard"
 
 function App() {
 
@@ -20,9 +20,11 @@ function App() {
 
   return (
     <>
-      <div id="main">
-        { forecast && <Dashboard forecast={forecast} /> }
-      </div>
+      { forecast && 
+        <div id="main" style={{ backgroundImage: `url(${forecast.bgImage})` }}>
+          <Dashboard forecast={forecast} />
+        </div>
+      }
     </>
   )
 }

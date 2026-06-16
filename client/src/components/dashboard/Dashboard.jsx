@@ -1,9 +1,10 @@
-import { useState } from "react";
+import "./Dashboard.css"
+import { useState } from "react"
 
 function Dashboard({ forecast }) {
 
     return (
-        <div>
+        <div id="dashboard">
             <h1>{forecast.name}</h1>
             <h1>{forecast.temp}</h1>
         </div>
